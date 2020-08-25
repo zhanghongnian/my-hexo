@@ -150,6 +150,10 @@ module.exports = class extends Component {
             {adsenseClientId ? <script data-ad-client={adsenseClientId}
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async={true}></script> : null}
 
+            {/* 访问分析 */}
+            <script async defer data-website-id="1735ff24-c304-4492-aa80-09dda8b91fa4" src="https://umami.zhnliving.cn/umami.js"></script>
+
+            {/* live2d 看板娘 */}
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"></link>
             {/* <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> */}
             <script src={helper.url_for('/live2d/autoload.js')}></script>
