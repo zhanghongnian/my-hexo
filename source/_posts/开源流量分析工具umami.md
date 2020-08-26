@@ -111,7 +111,8 @@ spec:
 
 ## 登陆
 初始化sql会创建默认的管理员账号 admin（密码 umami），所以登陆后第一件事就是更改账号密码。
-{% asset_img login.png 登陆 %}
+<img src="login.png" width="400px">
+
 登陆后点击头部的 Settings。然后点击左侧菜单中的 Profile 然后点击修改密码，修改一个强有力的密码吧
 {% asset_img change-password.png 修改密码 %}
 
@@ -119,7 +120,8 @@ spec:
 登陆 umami 后，点击头部的 settings，然后点击左侧的 websites ，然后点击 add website 按钮。
 {% asset_img add-website.png 增加监控网站 %}
 填充好下面的表单点击提交按钮即可。
-{% asset_img add-website-form.png 增加监控网站 %}
+<img src="add-website-form.png" width="400px">
+
 Name 字段可以填任意字符串，用来标示网站。
 Doamin 字段填写监控网站的域名，
 Enable share URL 复选框如果勾选上的话，分享链接就可以使用了。
