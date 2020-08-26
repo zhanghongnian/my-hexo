@@ -212,35 +212,35 @@ widgets:
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: toc
-    # Recommendation links widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: links
-        # Names and URLs of the sites
-        links:
-            Hexo: 'https://hexo.io'
-            Bulma: 'https://bulma.io'
-    # Categories widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: categories
+    # # Recommendation links widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: links
+    #     # Names and URLs of the sites
+    #     links:
+    #         Hexo: 'https://hexo.io'
+    #         Bulma: 'https://bulma.io'
+    # # Categories widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: categories
     # Recent posts widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
         position: left
         type: recent_posts
-    # Archives widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: archives
-    # Tags widget configurations
-    -
-        # Where should the widget be placed, left sidebar or right sidebar
-        position: right
-        type: tags
+    # # Archives widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: archives
+    # # Tags widget configurations
+    # -
+    #     # Where should the widget be placed, left sidebar or right sidebar
+    #     position: right
+    #     type: tags
     # # Google FeedBurner email subscription widget configurations
     # -
     #     # Where should the widget be placed, left sidebar or right sidebar
