@@ -73,11 +73,11 @@ class Widgets extends Component {
             [getColumnSizeClass(columnCount)]: true,
             [getColumnVisibilityClass(columnCount, position)]: true,
             [getColumnOrderClass(position)]: true,
-            'is-sticky': isColumnSticky(config, position)
+            // 'is-sticky': isColumnSticky(config, position)
         })}>
             {widgets.map(widget => {
-                // widget type is not defined
-                if (!widget.type) {
+                // 第一次循环循环加载 profile
+                if (!widget.type || widget.type !== "profile") {
                     return null;
                 }
                 try {
@@ -89,11 +89,38 @@ class Widgets extends Component {
                 }
                 return null;
             })}
+
+            <div class={classname({
+                'is-sticky': isColumnSticky(config, position)
+            })}
+            style={{"margin-top": "1.5rem"}}>
+                {widgets.map(widget => {
+                    // widget type is not defined
+                    if (!widget.type) {
+                        return null;
+                    }
+                    // 第二次循环内忽略 profile
+                    if (widget.type === "profile") {
+                        return null;
+                    }
+                    try {
+                        let Widget = view.require('widget/' + widget.type);
+                        Widget = Widget.Cacheable ? Widget.Cacheable : Widget;
+                        return <Widget site={site} helper={helper} config={config} page={page} widget={widget} />;
+                    } catch (e) {
+                        logger.w(`Icarus cannot load widget "${widget.type}"`);
+                    }
+                    return null;
+                })}
+                
+            </div>
+            
             {position === 'left' && hasColumn(config.widgets, 'right') ? <div class={classname({
                 'column-right-shadow': true,
                 'is-hidden-widescreen': true,
                 'is-sticky': isColumnSticky(config, 'right')
             })}></div> : null}
+
         </div>;
     }
 }
