@@ -93,7 +93,7 @@ class Widgets extends Component {
             <div class={classname({
                 'is-sticky': isColumnSticky(config, position)
             })}
-            style={{"margin-top": "1.5rem"}}>
+            style={widgets.filter(item => item.type === "profile").length>0 ? {"margin-top": "1.5rem"}: {}}>
                 {widgets.map(widget => {
                     // widget type is not defined
                     if (!widget.type) {
