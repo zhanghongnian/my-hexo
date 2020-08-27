@@ -5,7 +5,7 @@ keywords: null
 author: John Doe
 language: zh-CN
 timezone: ''
-url: 'http://yoursite.com'
+url: 'http://www.zhnliving.cn'
 root: /
 permalink: ':year/:month/:day/:title/'
 permalink_defaults: null
@@ -63,3 +63,8 @@ ignore: null
 theme: icarus
 deploy:
   type: ''
+# 生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
