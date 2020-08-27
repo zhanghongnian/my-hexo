@@ -1,7 +1,7 @@
 ---
 title: 开源流量分析工具umami
 date: 2020-08-25 22:43:44
-thumbnail: /img/preview.jpg
+thumbnail: /img/umami-preview.jpg
 tags: 
 - 流量分析
 categories:
