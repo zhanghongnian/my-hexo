@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2020-08-22 22:43:44
 categories:
 - helloword
 thumbnail: /img/hello-word.jpg
