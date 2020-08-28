@@ -48,3 +48,26 @@ develop 分支上是下一个交付版本的功能叠加代码，开发人员从
 {% asset_img feature-branch-with-develop-git-workflow-2.png 功能分支工作流改进版（增加开发分支） %}
 
 这个工作流的优点是，线上代码会很明确，出现线上问题时，不会因为有新代码影响到排查问题。但是这个流程对于一些团队来说比较冗长乏味。
+
+# gitflow 工作流
+
+gitflow 工作流相比前一种工作流，又增加了 hot-fix 和 release 两个分支。
+
+## hot-fix 分支
+
+hot-fix 分支可以从主分支 checkout 出来，开发完成后直接合并到 master 分支，而不是 develop 分支。它仅在有必须快速修复的线上问题时使用，这种分支的优点是，允许快速的部署到线上环境，不中断其他人的开发流程。
+
+一旦 hot-fix 分支被合并到 master 分支并部署，它也应该被合并到 develop 分支和 release 分支，这样做是为了确保后续开发的功能是在最新 master 分支代码基础上开发的。
+
+## release 分支
+
+release 分支是在 develop 分支和 master 分支中间的一层。这个分支存放一些文档，修复 bug 等非功能性代码。一旦这个分驻与主分支合并并部署到生产环境中后，也需要合并到 develop 分支里，这样保障了后续开发等新功能都是在最新等 master 分支代码基础上开发等。
+
+{% asset_img GitFlow-git-workflow-2.png gitflow 工作流 %}
+
+[Vincent Driessen](http://nvie.com/posts/a-successful-git-branching-model/) 首先发布了这个工作流，随后这种工作流慢慢流行起来了。
+
+git-flow 是一个基于 git 开发的工具，你可以在现有的代码库里安装 git-flow 来帮助你创建分支。
+- mac 上使用 `brew install git-flow` 安装。
+- window 上需要(下载安装)[https://git-scm.com/download/win]。
+安装完成后，使用 `git flow init` 初始化工作流。
