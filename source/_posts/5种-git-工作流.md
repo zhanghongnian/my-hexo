@@ -15,3 +15,24 @@ toc: true
 如何选择合适的 git 工作流取决于您的项目类型，团队规模，发布频率等因素，在本文中，我们将介绍5种 git 工作流的优缺点，以及适用场景，let's go !
 <!-- more -->
 本文翻译自 [https://zepel.io/blog/5-git-workflows-to-improve-development/](https://zepel.io/blog/5-git-workflows-to-improve-development/)
+
+# 基础工作流
+最简单的 git 工作流是只有一个分支 - master 分支，开发人员直接提交到 master 分支上，并使用 master 分支部署。
+
+{% asset_img Basic-git-workflow-3.png 简单 git 工作流 %}
+
+这种工作流通常不推荐，除非你的团队/项目规模非常小，并且你们想快速起步。
+
+因为只有一个分支，所以不涉及合并分支，这是的 git 使用变的很简单。但是这样会带来以下几个缺点：
+1. 多人合作时，需要不停的 rebase / merge 代码。
+2. 很有可能将别人不想上线的代码部署到线上环境。
+3. 代码缺少 review，后续代码会很难维护。
+
+# 功能分支工作流
+当有多个开发人员开发项目时，就必须使用 git 分支了。
+假设有多个开发者在同一分支上开发不同功能，他们向同一分支提交代码，这将使代码库变的非常混乱，并产生大量冲突。
+
+{% asset_img Feature-Branch-git-workflow-4.png 功能分支工作流 %}
+
+为了解决这个问题，不同的开发人员可以从 master 分支创建两个独立的分支，并分别开发他们的功能，当一个人完成自己的功能时，可以分别合并到 master 分支并发布到线上，无需等待第二个人开发完功能。
+这个工作流程的优点是，你在开发自己功能的时候不必担心代码冲突。
