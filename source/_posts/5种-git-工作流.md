@@ -71,3 +71,17 @@ git-flow 是一个基于 git 开发的工具，你可以在现有的代码库里
 - mac 上使用 `brew install git-flow` 安装。
 - window 上需要(下载安装)[https://git-scm.com/download/win]。
 安装完成后，使用 `git flow init` 初始化工作流。
+
+# git fork 工作流
+
+fork 工作流在开源团队中很流行。
+
+这个流程通常步骤如下：
+1. 开发者 fork 官方代码库 到自己到账号下。
+2. 开发者 clone 自己账号下到代码库到本地。
+3. 使用 `git remote add` 将官方代码库到远程路径添加到本地 git 仓库。 
+4. 在本地 checkout 一个功能分支进行开发.
+5. 然后提交到自己账号下的代码库。
+6. 创建一个 功能分支 到官方代码库的 pull request。
+7. 等待官方代码库的管理员检查审核代码，然后合并到官方代码库中。
+
