@@ -7,11 +7,11 @@ class Profile extends Component {
         if (!links.length) {
             return null;
         }
-        return <div class="level is-mobile">
+        return <div class="level is-mobile" style={{"font-family": "iconfont"}}>
             {links.filter(link => typeof link === 'object').map(link => {
                 return <a class="level-item button is-transparent is-marginless"
                     target="_blank" rel="noopener" title={link.name} href={link.url}>
-                    {'icon' in link ? <i class={link.icon}></i> : link.name}
+                    {'icon' in link ? <span class={link.icon}></span> : link.name}
                 </a>;
             })}
         </div>;
@@ -73,7 +73,10 @@ class Profile extends Component {
                     </div>
                 </nav>
                 {followLink ? <div class="level">
-                    <a class="level-item button is-primary is-rounded" href={followLink} target="_blank" rel="noopener">{followTitle}</a>
+                    <a class="level-item button is-primary is-rounded" href={followLink} target="_blank" rel="noopener">
+                        <span class="icon icon-logo-github mr-1" style={{"font-family": "iconfont"}}></span>
+                        <span>{followTitle}</span>
+                    </a>
                 </div> : null}
                 {socialLinks ? this.renderSocialLinks(socialLinks) : null}
             </div>

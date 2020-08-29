@@ -157,6 +157,9 @@ module.exports = class extends Component {
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"></link>
             {/* <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script> */}
             <script src={helper.url_for('/live2d/autoload.js')}></script>
+
+            {/* iconfont */}
+            <link rel="stylesheet" href="//at.alicdn.com/t/font_2034601_glv922fo4z9.css"></link>
         </head>;
     }
 };

@@ -179,35 +179,35 @@ widgets:
         position: left
         type: profile
         # Author name
-        author: Your name
+        author: zhnliving
         # Author title
-        author_title: Your title
+        author_title: 活在当下：停下来看看这个世界
         # Author's current location
-        location: Your location
+        location: Beijing, China
         # URL or path to the avatar image
-        avatar: 
+        avatar: /img/GO_BUILD.png
         # Whether show the rounded avatar image
         avatar_rounded: false
         # Email address for the Gravatar
         gravatar: 
         # URL or path for the follow button
-        follow_link: 'https://github.com/ppoffice'
+        follow_link: 'https://github.com/zhanghongnian'
         # Links to be shown on the bottom of the profile widget
         social_links:
-            Github:
-                icon: fab fa-github
-                url: 'https://github.com/ppoffice'
-            Facebook:
-                icon: fab fa-facebook
-                url: 'https://facebook.com'
-            Twitter:
-                icon: fab fa-twitter
-                url: 'https://twitter.com'
-            Dribbble:
-                icon: fab fa-dribbble
-                url: 'https://dribbble.com'
+            Bilibili:
+                icon: icon icon-bilibili-line
+                url: 'https://space.bilibili.com/387250295'
+            Zhihu:
+                icon: icon icon-logo-zhihu
+                url: 'https://www.zhihu.com/people/zhnliving-5'
+            Leetcode:
+                icon: icon icon-leetcode
+                url: 'https://leetcode-cn.com/u/do_simpledo_better/'
+            WangyiyunMusic:
+                icon: icon icon-wangyiyunyinyuemusic
+                url: 'https://music.163.com/#/user/home?id=580381752'
             RSS:
-                icon: fas fa-rss
+                icon: icon icon-rss_feed
                 url: /
     # Table of contents widget configurations
     -
