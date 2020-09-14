@@ -33,6 +33,9 @@ class Footer extends Component {
                         <p class="size-small">
                             <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备20031216号-1</a>
                         </p>
+                        <p class="size-small">
+                            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010502042298" target="_blank" rel="noopener">京公网安备 11010502042298 号</a>
+                        </p>
                     </div>
                     <div class="level-end">
                         {Object.keys(links).length ? <div class="field has-addons">
